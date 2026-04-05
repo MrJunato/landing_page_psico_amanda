@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Amanda Rodrigues | Psicologia Perinatal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --lilac: #B8A9C9;
+      --lilac-light: #D0C4DC;
+      --lilac-deep: #9680A8;
+      --cream: #FDF9FB;
+      --rose: #E2B8CC;
+      --rose-light: #F0D5E0;
+      --rose-pale: #F7E5EC;
+      --text: #3D3D3D;
+      --text-light: #6B6B6B;
+      --white: #FFFFFF;
+      --blush: #F5E1EB;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ---- NAV ---- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--lilac);
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--lilac);
+    }
+
+    /* ---- HERO ---- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(184, 169, 201, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(226, 184, 204, 0.2) 0%, transparent 60%),
+        var(--cream);
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--cream));
+    }
+
+    .hero-content {
+      max-width: 720px;
+      position: relative;
+      z-index: 1;
+      WebSiteSimple
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.45rem 1.4rem;
+      border-radius: 50px;
+      background: rgba(184, 169, 201, 0.12);
+      color: var(--lilac);
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .hero h1 em {
+      color: var(--lilac);
+      font-style: italic;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.95rem 2.6rem;
+      border-radius: 50px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--lilac);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(184, 169, 201, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--lilac-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(184, 169, 201, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--lilac);
+      border: 2px solid var(--lilac);
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover {
+      background: var(--lilac);
+      color: var(--white);
+    }
+
+    /* ---- SECTION COMMON ---- */
+    section {
+      padding: 6rem 5%;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-light);
+      font-weight: 300;
+      max-width: 560px;
+      font-size: 1.05rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header .section-subtitle {
+      margin: 0 auto;
+    }
+
+    /* ---- ABOUT ---- */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .about-image {
+      flex: 1 1 340px;
+      aspect-ratio: 4/5;
+      border-radius: 200px 200px 40px 40px;
+      background:
+        linear-gradient(135deg, var(--blush) 0%, var(--rose-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image svg {
+      width: 180px;
+      opacity: 0.6;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+    }
+
+    .about-text p {
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+    }
+
+    .about-text .crp {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.3rem 1rem;
+      background: rgba(184, 169, 201, 0.1);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      color: var(--lilac);
+      font-weight: 700;
+    }
+
+    /* ---- SERVICES ---- */
+    #servicos {
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      background: rgba(184, 169, 201, 0.12);
+    }
+
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--lilac);
+      fill: none;
+    }
+
+    .service-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      font-size: 0.92rem;
+      font-weight: 300;
+    }
+
+    /* ---- APPROACH ---- */
+    .approach-items {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .approach-item {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .approach-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--rose-light);
+      line-height: 1;
+      min-width: 48px;
+    }
+
+    .approach-item h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .approach-item p {
+      color: var(--text-light);
+      font-weight: 300;
+      font-size: 0.95rem;
+    }
+
+    /* ---- TESTIMONIALS ---- */
+    #depoimentos {
+      background: var(--white);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: var(--rose-light);
+      position: absolute;
+      top: 0.5rem;
+      left: 1.5rem;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: var(--text-light);
+      font-weight: 300;
+      margin-bottom: 1.2rem;
+      padding-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--lilac);
+    }
+
+    /* ---- CTA ---- */
+    .cta {
+      text-align: center;
+      padding: 6rem 2rem;
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(184, 169, 201, 0.08) 0%, transparent 70%),
+        var(--cream);
+    }
+
+    .cta .section-title {
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: var(--text-light);
+      font-weight: 300;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      padding: 3rem 5%;
+      background: var(--text);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      font-weight: 300;
+    }
+
+    footer a {
+      color: var(--rose-light);
+      text-decoration: none;
+    }
+
+    footer .footer-info {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- MOBILE ---- */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 7rem 1.5rem 3rem;
+      }
+
+      section {
+        padding: 4rem 5%;
+      }
+
+      .about {
+        gap: 2rem;
+      }
+
+      .about-image {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 0.8rem;
+      }
+
+      .hero .btn {
+        display: block;
+      }
+    }
+
+    /* ---- SCROLL ANIMATION ---- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="logo">Dra. Amanda <span>Rodrigues</span></a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#abordagem">Abordagem</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-badge">Psicologia Perinatal</div>
+      <h1>Cuidar de quem <em>espera</em> é cuidar de quem vai <em>nascer</em></h1>
+      <p>Acompanhamento psicológico especializado para a gestante e a família, do planejamento à parentalidade, com
+        acolhimento e evidência cient&iacute;fica.</p>
+      <a href="#contato" class="btn btn-primary">Agende uma conversa</a>
+      <a href="#sobre" class="btn btn-outline">Saiba mais</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="sobre">
+    <div class="about">
+      <div class="about-image fade-up">
+        <svg viewBox="0 0 200 260" fill="none" stroke="#B8A9C9" stroke-width="1.5" opacity="0.45">
+          <circle cx="100" cy="70" r="42" />
+          <path d="M42 200c0-32 26-58 58-58s58 26 58 58" />
+          <path d="M78 108c4 14 18 30 22 44" stroke-linecap="round" />
+          <circle cx="130" cy="140" r="10" stroke-dasharray="3 3" />
+        </svg>
+      </div>
+      <div class="about-text fade-up">
+        <div class="section-label">Sobre mim</div>
+        <h2 class="section-title">Um espa&ccedil;o seguro para sua jornada maternal</h2>
+        <p>Sou a Dra. Amanda Rodrigues, psicóloga clínica com especializa&ccedil;&atilde;o em psicologia perinatal e
+          materna. Há mais de 8 anos accompagno mulheres e famílias nesse período de transforma&ccedil;&atilde;o.</p>
+        <p>Acredito que cuidar da saúde mental durante a gestação e o pós-parto é fundamental para o vínculo entre mãe e
+          bebê, e ofereço um ambiente livre de julgamentos onde cada história é acolhida com respeito.</p>
+        <span class="crp">CRP 06/12345</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="servicos">
+    <div class="section-header fade-up">
+      <div class="section-label">Serviços</div>
+      <h2 class="section-title">Como posso te ajudar</h2>
+      <p class="section-subtitle">Cada fase da jornada reprodutiva merece cuidado especializado</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z" />
+          </svg>
+        </div>
+        <h3>Acompanhamento na Gestação</h3>
+        <p>Suporte emocional para ansiedade, medos, mudanças de identidade e preparação para o parto.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <h3>Pós-Parto</h3>
+        <p>Prevenção e tratamento da depressão pós-parto, ansiedade e adaptação à nova realidade.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+        </div>
+        <h3>Perda Gestacional</h3>
+        <p>Acolhimento especializado para o luto gestacional, com escuta sensível e compassiva.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <h3>Orientação Parental</h3>
+        <p>Preparação emocional para a chegada do bebê, orientação sobre vínculo e cuidados iniciais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="abordagem">
+    <div class="section-header fade-up">
+      <div class="section-label">Abordagem</div>
+      <h2 class="section-title">Como funciona o acompanhamento</h2>
+      <p class="section-subtitle">Um processo estruturado e humanizado para cada momento</p>
+    </div>
+    <div class="approach-items">
+      <div class="approach-item fade-up">
+        <div class="approach-num">01</div>
+        <div>
+          <h3>Consulta Inicial</h3>
+          <p>Conversamos para entender sua história, suas necessidades e definir juntos os objetivos do acompanhamento.
+          </p>
+        </div>
+      </div>
+      <div class="approach-item fade-up">
+        <div class="approach-num">02</div>
+        <div>
+          <h3>Plano de Cuidado Personalizado</h3>
+          <p>Cada gestação é única. Construo um plano de atendimento baseado nas suas demandas e no seu momento de vida.
+          </p>
+        </div>
+      </div>
+      <div class="approach-item fade-up">
+        <div class="approach-num">03</div>
+        <div>
+          <h3>Sessões de Acompanhamento</h3>
+          <p>Encontros semanais ou quinzenais, presenciais ou online, em um ambiente seguro e sem julgamentos.</p>
+        </div>
+      </div>
+      <div class="approach-item fade-up">
+        <div class="approach-num">04</div>
+        <div>
+          <h3>Suporte Contínuo</h3>
+          <p>Acompanho você da gestação ao pós-parto, me adaptando às suas necessidades em cada fase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="depoimentos">
+    <div class="section-header fade-up">
+      <div class="section-label">Depoimentos</div>
+      <h2 class="section-title">O que dizem sobre o atendimento</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <p>A Camila foi fundamental na minha gestação. Me senti acolhida e compreendida em cada sessão. Recomendo para
+          todas as mães que buscam suporte emocional.</p>
+        <div class="testimonial-author">— Juliana M., mãe da Helena</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <p>Depois de uma perda gestacional, não sabia por onde começar. A Dra. Camila me ajudou a atravessar esse
+          momento com muito cuidado e respeito pelo meu luto.</p>
+        <div class="testimonial-author">— Fernanda S.</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <p>O acompanhamento no pós-parto fez toda a diferença. Aprendi a lidar com a ansiedade e a aproveitar os
+          primeiros meses do meu filho com mais presença.</p>
+        <div class="testimonial-author">— Patrícia L., mãe do Theo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contato">
+    <div class="fade-up">
+      <div class="section-label">Contato</div>
+      <h2 class="section-title">Vamos conversar?</h2>
+      <p>Agende sua consulta inicial e dê o primeiro passo para uma gestação mais leve e saudável.</p>
+      <a href="https://wa.me/5511988483143" class="btn btn-primary" target="_blank" rel="noopener">
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-info">
+      Dra. Amanda Rodrigues &middot; Psicologia Perinatal
+    </div>
+    <div style="margin-bottom:1rem;">
+      <a href="https://www.instagram.com/amandarodriguespsicologa/" target="_blank" rel="noopener"
+        style="margin:0 0.6rem;">Instagram</a> &middot;
+      <a href="https://wa.me/5511988483143" target="_blank" rel="noopener" style="margin:0 0.6rem;">WhatsApp</a>
+      &middot;
+      <a href="https://linktr.ee/amandarodriguespsicologa" target="_blank" rel="noopener"
+        style="margin:0 0.6rem;">Linktree</a>
+    </div>
+    <p style="font-size:0.78rem; opacity:0.5;">&copy; 2026 &mdash; Todos os direitos reservados</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Navbar shadow on scroll
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Fade-up on scroll
+    const items = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    items.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>

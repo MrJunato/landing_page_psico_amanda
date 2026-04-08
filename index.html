@@ -593,8 +593,15 @@
     }
 
     @keyframes modalIn {
-      from { opacity: 0; transform: translateY(20px) scale(0.97); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .modal-close {
@@ -614,7 +621,9 @@
       z-index: 10;
     }
 
-    .modal-close:hover { background: var(--rose-pale); }
+    .modal-close:hover {
+      background: var(--rose-pale);
+    }
 
     .modal-close svg {
       width: 16px;
@@ -670,7 +679,7 @@
       margin-bottom: 2rem;
     }
 
-    .modal-description p + p {
+    .modal-description p+p {
       margin-top: 0.8rem;
     }
 
@@ -734,8 +743,13 @@
     }
 
     @media (max-width: 768px) {
-      .modal-body { padding: 1.5rem; }
-      .modal-title { font-size: 1.25rem; }
+      .modal-body {
+        padding: 1.5rem;
+      }
+
+      .modal-title {
+        font-size: 1.25rem;
+      }
     }
 
     /* ---- CTA ---- */
@@ -1020,13 +1034,8 @@
     <!-- Bloco 1: Missão / Profissional -->
     <div class="about-mission">
       <div class="about-image fade-up">
-        <img
-          src="imagens/foto_amanda.png"
-          alt="Amanda Rodrigues, psicóloga perinatal, sorrindo"
-          width="400"
-          height="500"
-          style="width: 100%; height: 100%; object-fit: cover; object-position: top center;"
-        >
+        <img src="imagens/foto_amanda.png" alt="Amanda Rodrigues, psicóloga perinatal, sorrindo" width="400"
+          height="500" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
       </div>
       <div class="about-mission-text fade-up">
         <div class="section-label">Sobre mim</div>
@@ -1120,45 +1129,66 @@
       <div class="service-card fade-up" data-service="gestacao">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z"/>
+            <path
+              d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z" />
           </svg>
         </div>
         <h3>Acompanhamento na Gestação</h3>
         <p>Suporte emocional para ansiedade, medos, mudanças de identidade e preparação para o parto.</p>
-        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></span>
       </div>
 
       <div class="service-card fade-up" data-service="posparto">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
           </svg>
         </div>
         <h3>Pós-Parto</h3>
         <p>Prevenção e tratamento da depressão pós-parto, ansiedade e adaptação à nova realidade.</p>
-        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></span>
       </div>
 
       <div class="service-card fade-up" data-service="perda">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
           </svg>
         </div>
         <h3>Perda Gestacional</h3>
         <p>Acolhimento especializado para o luto gestacional, com escuta sensível e compassiva.</p>
-        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></span>
       </div>
 
       <div class="service-card fade-up" data-service="parental">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
         </div>
         <h3>Orientação Parental</h3>
         <p>Preparação emocional para a chegada do bebê, orientação sobre vínculo e cuidados iniciais.</p>
-        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <span class="service-cta">Saiba mais <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg></span>
       </div>
 
     </div>
@@ -1168,7 +1198,10 @@
   <div class="modal-overlay" id="serviceModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal">
       <button class="modal-close" id="modalClose" aria-label="Fechar">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
       </button>
       <div class="modal-body">
         <div class="modal-header">

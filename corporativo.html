@@ -207,9 +207,8 @@
       text-align: center;
       padding: 8rem 2rem 4rem;
       background:
-        linear-gradient(90deg, rgba(253, 249, 251, 0.9) 0%, rgba(253, 249, 251, 0.72) 48%, rgba(253, 249, 251, 0.84) 100%),
         radial-gradient(ellipse at 20% 50%, rgba(184, 169, 201, 0.14) 0%, transparent 60%),
-        url('imagens/hero/corporativo-hero.jpg') center center / cover no-repeat,
+        radial-gradient(ellipse at 80% 30%, rgba(226, 184, 204, 0.16) 0%, transparent 60%),
         var(--cream);
       position: relative;
       overflow: hidden;
@@ -242,6 +241,15 @@
     nav {
       position: fixed;
       z-index: 100;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('imagens/hero/corporativo-hero.jpg') center center / cover no-repeat;
+      opacity: 0.14;
+      pointer-events: none;
     }
 
     .hero::after {

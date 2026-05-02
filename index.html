@@ -73,6 +73,56 @@
   }
   </script>
 
+  <!-- Schema.org: serviços corporativos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Soluções em Saúde Mental Perinatal Corporativa",
+    "description": "Programas estruturados de saúde mental perinatal para empresas: cuidado emocional a gestantes, suporte ao retorno da licença-maternidade e workshop para RH e lideranças.",
+    "url": "https://www.amandarodriguespsicologa.com.br/corporativo.html",
+    "areaServed": { "@type": "Country", "name": "Brasil" },
+    "serviceType": "Saúde mental perinatal corporativa",
+    "provider": {
+      "@type": "Person",
+      "name": "Amanda Rodrigues",
+      "jobTitle": "Psicóloga Perinatal",
+      "url": "https://www.amandarodriguespsicologa.com.br/",
+      "identifier": "CRP 14/2011"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Soluções Corporativas",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Programa de Cuidado Emocional a Gestantes",
+            "description": "8 rodas de conversa em grupo, 2 sessões individuais por participante, encontro com gestores e relatório final."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Programa de Pós-Parto e Retorno ao Trabalho",
+            "description": "4 rodas de conversa em grupo, 2 sessões individuais por participante, encontro com gestores e relatório final."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Workshop Intensivo de Saúde Mental Perinatal",
+            "description": "Workshop de 1 ou 2 dias para RH e lideranças, em formato presencial, remoto ou híbrido, com materiais de apoio inclusos."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
@@ -92,12 +142,14 @@
       --lilac-deep: #9680A8;
       --cream: #FDF9FB;
       --rose: #E2B8CC;
+      --rose-deep: #8F536C;
       --rose-light: #F0D5E0;
       --rose-pale: #F7E5EC;
       --text: #3D3D3D;
       --text-light: #6B6B6B;
       --white: #FFFFFF;
       --blush: #F5E1EB;
+      --lilac-text: #6F5681;
     }
 
     html {
@@ -965,6 +1017,52 @@
       }
     }
 
+    /* ---- TEASER CORPORATIVO ---- */
+    #corporativo-teaser {
+      background: linear-gradient(135deg, var(--blush) 0%, var(--rose-pale) 100%);
+      text-align: center;
+    }
+
+    .corp-teaser-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .corp-teaser-wrap .section-subtitle {
+      margin: 0 auto 2rem;
+      max-width: 620px;
+    }
+
+    .corp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 2.4rem;
+    }
+
+    .corp-tag {
+      padding: 0.5rem 1.1rem;
+      border-radius: 50px;
+      background: var(--white);
+      color: var(--lilac-deep);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      box-shadow: 0 2px 10px rgba(184, 169, 201, 0.12);
+    }
+
+    .corp-teaser-cta {
+      background: var(--white);
+      color: var(--lilac-deep);
+      border: 2px solid var(--lilac);
+    }
+
+    .corp-teaser-cta:hover {
+      background: var(--lilac);
+      color: var(--white);
+    }
+
     /* ---- FAQ ---- */
     #faq {
       background: rgba(255, 255, 255, 0.55);
@@ -1083,6 +1181,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
+      <li><a href="corporativo.html">Para Empresas</a></li>
       <li><a href="#faq">Dúvidas</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
@@ -1268,6 +1367,21 @@
           </svg></span>
       </div>
 
+    </div>
+  </section>
+
+  <!-- TEASER CORPORATIVO -->
+  <section id="corporativo-teaser">
+    <div class="corp-teaser-wrap fade-up">
+      <div class="section-label">Para Empresas</div>
+      <h2 class="section-title">Saúde mental perinatal estruturada para o seu time</h2>
+      <p class="section-subtitle">Além do atendimento clínico, ofereço soluções corporativas para empresas que querem cuidar de colaboradoras gestantes, apoiar o retorno da licença-maternidade e capacitar RH e lideranças com ética e consistência.</p>
+      <div class="corp-tags" aria-label="Soluções disponíveis">
+        <span class="corp-tag">Programa Gestantes</span>
+        <span class="corp-tag">Pós-Parto e Retorno</span>
+        <span class="corp-tag">Workshop RH e Lideranças</span>
+      </div>
+      <a href="corporativo.html" class="btn corp-teaser-cta">Conhecer soluções corporativas <span aria-hidden="true">→</span></a>
     </div>
   </section>
 

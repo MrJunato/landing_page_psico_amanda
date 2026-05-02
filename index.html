@@ -127,7 +127,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 5%;
+      padding: 0.8rem 5%;
+      height: 64px;
+      overflow: visible;
       background: rgba(250, 247, 242, 0.92);
       backdrop-filter: blur(12px);
       transition: box-shadow 0.3s;
@@ -143,9 +145,21 @@
       font-weight: 600;
       color: var(--lilac);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-left: -12px;
+      gap: 10px;
     }
 
-    .logo span {
+    .logo-img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      pointer-events: none;
+      filter: brightness(0) saturate(100%) invert(38%) sepia(22%) saturate(680%) hue-rotate(232deg) brightness(82%) contrast(92%);
+    }
+
+    .logo-text span {
       font-style: italic;
       color: var(--rose);
     }
@@ -182,6 +196,41 @@
         radial-gradient(ellipse at 80% 30%, rgba(226, 184, 204, 0.2) 0%, transparent 60%),
         var(--cream);
       position: relative;
+      overflow: hidden;
+    }
+
+    .page-watermark {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .page-watermark img {
+      width: min(680px, 80vw);
+      height: auto;
+      opacity: 0.13;
+      filter: brightness(0) saturate(100%) invert(59%) sepia(13%) saturate(620%) hue-rotate(232deg) brightness(91%) contrast(88%);
+    }
+
+    nav,
+    section,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-logo {
+      display: block;
+      margin: 0 auto 0.1rem;
+      height: 200px;
+      width: auto;
+      opacity: 1;
+      filter: brightness(0) invert(1);
     }
 
     .hero::before {
@@ -493,7 +542,7 @@
 
     /* ---- SERVICES ---- */
     #servicos {
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.55);
     }
 
     .services-grid {
@@ -786,7 +835,7 @@
     /* ---- FOOTER ---- */
     footer {
       text-align: center;
-      padding: 3rem 5%;
+      padding: 0.4rem 5% 1rem;
       background: var(--text);
       color: rgba(255, 255, 255, 0.5);
       font-size: 0.85rem;
@@ -918,7 +967,7 @@
 
     /* ---- FAQ ---- */
     #faq {
-      background: var(--white);
+      background: rgba(255, 255, 255, 0.55);
     }
 
     .faq-list {
@@ -1021,9 +1070,16 @@
 
 <body>
 
+  <div class="page-watermark" aria-hidden="true">
+    <img src="logo/MARCA D'ÁGUA PRETA_LOGO.png" alt="">
+  </div>
+
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="logo">Amanda Rodrigues <span>Psicóloga</span></a>
+    <a href="#" class="logo">
+      <img src="logo/MARCA D'ÁGUA PRETA_SUBLOGO.png" alt="" aria-hidden="true" class="logo-img">
+      <span class="logo-text">Amanda Rodrigues <span>Psicóloga</span></span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
@@ -1333,6 +1389,7 @@
 
   <!-- FOOTER -->
   <footer>
+    <img src="logo/MARCA D'ÁGUA PRETA_LOGO.png" alt="Amanda Rodrigues Psicóloga" class="footer-logo">
     <div class="footer-info">
       Amanda Rodrigues &middot; Psicologia Perinatal
     </div>

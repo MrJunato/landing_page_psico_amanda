@@ -1352,6 +1352,15 @@
       }
     }
   </style>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC7CGSCF12"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VC7CGSCF12', { 'anonymize_ip': true });
+  </script>
 </head>
 
 <body>
@@ -1850,6 +1859,15 @@
       });
     }, { threshold: 0.15 });
     items.forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Banner LGPD -->
+  <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#2d2d2d;color:#fff;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:9999;font-family:Lato,sans-serif;font-size:14px;">
+    <span>Este site usa cookies para análise de tráfego, conforme nossa política de privacidade.</span>
+    <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookieOk','1')" style="background:#b07b9e;color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;white-space:nowrap;flex-shrink:0;">Entendi</button>
+  </div>
+  <script>
+    if(localStorage.getItem('cookieOk')) document.getElementById('cookie-banner').style.display='none';
   </script>
 </body>
 

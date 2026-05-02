@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext --version)",
+      "Bash(pdftotext -layout \"Soluções em Saúde Mental Perinatal Corporativa — Amanda Rodrigues.pdf\" /tmp/corp.txt)",
+      "Read(//tmp/**)",
+      "Read(//c/tmp/**)"
+    ]
+  }
+}

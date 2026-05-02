@@ -315,7 +315,7 @@
       padding: 0.45rem 1.4rem;
       border-radius: 50px;
       background: rgba(184, 169, 201, 0.12);
-      color: var(--lilac);
+      color: var(--lilac-text);
       font-size: 0.8rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
@@ -390,7 +390,7 @@
       font-size: 0.75rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--rose);
+      color: var(--rose-deep);
       font-weight: 700;
       margin-bottom: 0.8rem;
     }
@@ -1163,6 +1163,181 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    @media (max-width: 768px) {
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      nav {
+        height: 60px;
+        padding: 0.65rem 1rem;
+      }
+
+      .logo {
+        min-width: 0;
+        margin-left: -6px;
+        gap: 6px;
+      }
+
+      .logo-img {
+        height: 64px;
+      }
+
+      .logo-text {
+        font-size: 1rem;
+        line-height: 1.1;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 6.25rem 1rem 3rem;
+      }
+
+      .hero-badge {
+        max-width: 100%;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.68rem;
+        line-height: 1.45;
+        white-space: normal;
+      }
+
+      .hero p,
+      .section-subtitle,
+      .cta p {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 3.5rem 1rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.25rem;
+      }
+
+      .page-watermark img {
+        width: 112vw;
+        opacity: 0.08;
+      }
+
+      .about-mission,
+      .about-personal {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .about-mission-text,
+      .about-personal-text,
+      .about-credentials,
+      .credential-info,
+      .corp-teaser-wrap {
+        min-width: 0;
+      }
+
+      .about-personal {
+        border-radius: 22px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        padding: 1.7rem 1.25rem;
+      }
+
+      .modal-overlay {
+        align-items: flex-start;
+        padding: 0.8rem;
+      }
+
+      .modal {
+        max-height: calc(100vh - 1.6rem);
+        border-radius: 20px;
+      }
+
+      .modal-header,
+      .modal-actions {
+        flex-direction: column;
+      }
+
+      .modal-header {
+        padding-right: 2.2rem;
+      }
+
+      .modal-video .instagram-media,
+      .modal-video blockquote {
+        min-width: 0 !important;
+      }
+
+      .modal-actions .btn,
+      .modal-actions .btn-instagram,
+      .hero .btn,
+      .cta .btn,
+      .corp-teaser-cta {
+        width: 100%;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .corp-tags {
+        justify-content: flex-start;
+      }
+
+      .corp-tag {
+        width: 100%;
+        text-align: center;
+      }
+
+      .faq-question {
+        padding: 1.1rem 1rem;
+        font-size: 0.95rem;
+      }
+
+      .faq-answer-inner {
+        padding: 0 1rem 1.2rem;
+      }
+
+      .footer-logo {
+        height: 140px;
+        max-width: 90vw;
+      }
+
+      footer div {
+        line-height: 2;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .logo-text {
+        font-size: 0.9rem;
+      }
+
+      .logo-img {
+        height: 58px;
+      }
+
+      .btn {
+        padding: 0.85rem 1.2rem;
+        font-size: 0.86rem;
+      }
+
+      .modal-body {
+        padding: 1.2rem;
+      }
+    }
   </style>
 </head>
 
@@ -1174,11 +1349,12 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#" class="logo">
+    <a href="index.html" class="logo" aria-label="Voltar para o início">
       <img src="logo/MARCA D'ÁGUA PRETA_SUBLOGO.png" alt="" aria-hidden="true" class="logo-img">
       <span class="logo-text">Amanda Rodrigues <span>Psicóloga</span></span>
     </a>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="corporativo.html">Para Empresas</a></li>

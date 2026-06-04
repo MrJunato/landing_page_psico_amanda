@@ -1,0 +1,21 @@
+{
+    "github.copilot.chat.promptFiles": {
+        ".github/prompts/psychology-expert.prompt.md": true,
+        ".github/prompts/seo-specialist.prompt.md": true,
+        ".github/prompts/copywriter.prompt.md": true,
+        ".github/prompts/frontend-dev.prompt.md": true,
+        ".github/prompts/qa-reviewer.prompt.md": true
+    },
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".github/copilot-instructions.md"
+        }
+    ],
+    "files.associations": {
+        "*.prompt.md": "markdown"
+    },
+    "editor.formatOnSave": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.wrapLineLength": 120,
+    "files.trimTrailingWhitespace": true
+}

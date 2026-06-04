@@ -5,18 +5,30 @@
 ```
 SitePsicologia/
   index.html          ← arquivo principal (HTML + CSS inline, ~736 linhas)
+  corporativo.html    ← página para público corporativo
   CNAME               ← domínio GitHub Pages
   README              ← descrição do repositório
   CLAUDE.md           ← instruções para Claude Code
   PROJECT_MAP.md      ← este arquivo
   .claude/
-    agents/           ← agentes especialistas
+    agents/           ← agentes Claude Code
       psychology-expert.md
       seo-specialist.md
       copywriter.md
       frontend-dev.md
       qa-reviewer.md
     settings.json
+    settings.local.json
+  .github/
+    copilot-instructions.md   ← instruções para DeepSeek/Copilot
+    prompts/                  ← skills Copilot (equivalentes aos agents)
+      psychology-expert.prompt.md
+      seo-specialist.prompt.md
+      copywriter.prompt.md
+      frontend-dev.prompt.md
+      qa-reviewer.prompt.md
+  .vscode/
+    settings.json             ← configurações do workspace VS Code
 ```
 
 ## Estrutura do index.html

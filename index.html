@@ -720,18 +720,55 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        overflow: hidden;
       }
 
-      .service-video-thumb svg {
-        width: 48px;
-        height: 48px;
-        opacity: 0.85;
-        transition: opacity 0.3s, transform 0.3s;
+      .service-video-thumb img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: blur(2px);
+        transform: scale(1.06);
+        transition: filter 0.3s ease;
       }
 
-      .service-real-card:hover .service-video-thumb svg {
-        opacity: 1;
-        transform: scale(1.08);
+      .service-real-card:hover .service-video-thumb img {
+        filter: blur(6px);
+      }
+
+      .service-video-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(150, 128, 168, 0.5) 0%, rgba(111, 86, 129, 0.4) 100%);
+        pointer-events: none;
+      }
+
+      .service-real-card:hover .service-video-thumb::after {
+        background: linear-gradient(135deg, rgba(150, 128, 168, 0.62) 0%, rgba(111, 86, 129, 0.52) 100%);
+      }
+
+      /* ENQUADRAMENTO DAS THUMBS — ajuste fino por cartao:
+         o 2o valor move a foto na vertical. 0% = mostra o topo,
+         100% = mostra a base. DIMINUA para descer a foto
+         (mostrar o rosto no topo) | AUMENTE para subir a foto. */
+      .service-real-card[data-service="terapia"] .service-video-thumb img {
+        object-position: center 30%;
+      }
+      .service-real-card[data-service="prenatal"] .service-video-thumb img {
+        object-position: center 10%;
+      }
+      .service-real-card[data-service="roda"] .service-video-thumb img {
+        object-position: center 20%;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .service-video-thumb img {
+          transition: none;
+        }
       }
 
       .service-real-body {
@@ -902,63 +939,8 @@
         margin-top: 0.8rem;
       }
 
-      .modal-video {
-        margin-bottom: 1.5rem;
-      }
-
-      .modal-video-placeholder {
-        background: var(--cream);
-        border-radius: 16px;
-        padding: 2rem;
-        text-align: center;
-        color: var(--text-light);
-        font-size: 0.88rem;
-        font-weight: 300;
-        border: 2px dashed var(--lilac-light);
-      }
-
-      .modal-video-placeholder svg {
-        width: 40px;
-        height: 40px;
-        stroke: var(--lilac-light);
-        fill: none;
-        margin-bottom: 0.8rem;
-      }
-
-      .modal-video-placeholder--future {
-        background: linear-gradient(135deg, rgba(201, 184, 212, 0.08) 0%, rgba(166, 139, 181, 0.12) 100%);
-        border: 2px dashed #C9B8D4;
-      }
-
-      .modal-video-placeholder--future p {
-        margin: 0;
-        color: #A68BB5;
-      }
-
-      .modal-video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%;
-        /* 16:9 */
-        height: 0;
-        overflow: hidden;
-        border-radius: 16px;
-      }
-
-      .modal-video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 16px;
-      }
-
-      .modal-video .instagram-media {
-        border-radius: 12px !important;
-        margin: 0 auto !important;
-      }
-
       .modal-actions {
+        margin-top: 1.5rem;
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
@@ -1414,10 +1396,6 @@
           padding-right: 2.2rem;
         }
 
-        .modal-video .instagram-media,
-        .modal-video blockquote {
-          min-width: 0 !important;
-        }
 
         .modal-actions .btn,
         .modal-actions .btn-instagram,
@@ -1536,7 +1514,7 @@
       <!-- Bloco 1: Missão / Profissional -->
       <div class="about-mission">
         <div class="about-image fade-up">
-          <img src="imagens/perfil/foto-amanda.png" alt="Amanda Rodrigues, psicóloga perinatal, sorrindo" width="400"
+          <img src="imagens/perfil/_MG_9197.JPG" alt="Amanda Rodrigues, psicóloga perinatal, sorrindo" decoding="async" width="400"
             height="500" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
         </div>
         <div class="about-mission-text fade-up">
@@ -1709,11 +1687,7 @@
 
         <div class="service-real-card fade-up" data-service="terapia">
           <div class="service-video-thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
-            </svg>
+            <img src="imagens/thumb/terapia_individual.JPG" alt="Terapia individual" decoding="async">
           </div>
           <div class="service-real-body">
             <h3>Terapia Individual</h3>
@@ -1729,11 +1703,7 @@
 
         <div class="service-real-card fade-up" data-service="prenatal">
           <div class="service-video-thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
-            </svg>
+            <img src="imagens/thumb/pre_natal_psicologico.jpeg" alt="Pré-natal psicológico" decoding="async">
           </div>
           <div class="service-real-body">
             <h3>Pré-Natal Psicológico</h3>
@@ -1748,11 +1718,7 @@
 
         <div class="service-real-card fade-up" data-service="roda">
           <div class="service-video-thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
-            </svg>
+            <img src="imagens/thumb/roda_conversa.JPG" alt="Roda de conversa" decoding="async">
           </div>
           <div class="service-real-body">
             <h3>Roda de Conversa</h3>
@@ -1801,7 +1767,6 @@
             <h2 class="modal-title" id="modalTitle"></h2>
           </div>
           <div class="modal-description" id="modalDescription"></div>
-          <div class="modal-video" id="modalVideo"></div>
           <div class="modal-actions" id="modalActions"></div>
         </div>
       </div>
@@ -1981,19 +1946,16 @@
           icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8M12 8v8"/></svg>`,
           title: 'Terapia Individual',
           description: `<p>Sessões de psicoterapia com duração de 50 minutos, disponíveis nas modalidades presencial e online. Um espaço sigiloso e acolhedor para você explorar suas emoções, desafios e transformações durante o ciclo gravídico-puerperal e em outras fases da vida.</p><p>A abordagem utilizada é a Gestalt-Terapia, que coloca você como protagonista do seu próprio processo. O ritmo é o seu, e cada sessão é um convite ao autoconhecimento com acolhimento e respeito.</p>`,
-          video: null, // Substitua por: 'https://www.youtube.com/embed/CODIGO_DO_VIDEO'
         },
         prenatal: {
           icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
           title: 'Pré-Natal Psicológico',
           description: `<p>Programa estruturado em 8 encontros de 1h30, realizado em grupo com até 8 gestantes ou de forma individual. Cada encontro aborda um tema relevante para a preparação emocional durante a gestação, parto e pós-parto.</p><p>O Pré-Natal Psicológico é um espaço de acolhimento e informação que fortalece seus recursos internos, amplia a consciência sobre as transformações desse período e promove uma vivência mais integrada e segura da maternidade.</p>`,
-          video: null, // Substitua por: 'https://www.youtube.com/embed/CODIGO_DO_VIDEO'
         },
         roda: {
           icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/></svg>`,
           title: 'Roda de Conversa',
           description: `<p>Encontros em grupo para promoção do diálogo e reflexões sobre saúde mental, emoções e desafios vividos no ciclo perinatal. Um espaço coletivo de acolhimento, escuta ativa e troca de experiências entre mulheres que compartilham vivências semelhantes.</p><p>A Roda de Conversa é um convite para que você se sinta acompanhada, reconheça que não está sozinha nas suas vivências e encontre novas perspectivas a partir da escuta e da fala em um ambiente seguro e mediado.</p>`,
-          video: null, // Substitua por: 'https://www.youtube.com/embed/CODIGO_DO_VIDEO'
         }
       };
 
@@ -2008,33 +1970,6 @@
         document.getElementById('modalIcon').innerHTML = s.icon;
         document.getElementById('modalTitle').textContent = s.title;
         document.getElementById('modalDescription').innerHTML = s.description;
-
-        // Vídeo (apenas para serviços que possuem a propriedade 'video')
-        const videoEl = document.getElementById('modalVideo');
-        if ('video' in s) {
-          if (s.video) {
-            videoEl.innerHTML = `
-            <div class="modal-video-wrapper">
-              <iframe src="${s.video}" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                title="Vídeo: ${s.title}">
-              </iframe>
-            </div>`;
-          } else {
-            videoEl.innerHTML = `
-            <div class="modal-video-placeholder modal-video-placeholder--future">
-              <svg viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" stroke="#C9B8D4" stroke-width="1.2"/>
-                <polygon points="10 8 16 12 10 16 10 8" fill="#C9B8D4" stroke="none"/>
-              </svg>
-              <p>Vídeo explicativo em breve.</p>
-            </div>`;
-          }
-        } else {
-          // Temas: sem vídeo, sem placeholder
-          videoEl.innerHTML = '';
-        }
 
         // Botões
         const actionsEl = document.getElementById('modalActions');
@@ -2055,7 +1990,6 @@
       function closeModal() {
         modalOverlay.classList.remove('open');
         document.body.style.overflow = '';
-        document.getElementById('modalVideo').innerHTML = '';
       }
 
       document.querySelectorAll('.service-card').forEach(card => {

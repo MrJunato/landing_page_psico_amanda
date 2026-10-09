@@ -652,10 +652,47 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 3rem 2rem;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
         min-height: 260px;
         text-align: center;
         transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .corp-video-thumb img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        display: block;
+        filter: blur(2px);
+        transform: scale(1.06);
+        transition: filter 0.3s ease;
+      }
+
+      .corp-video-thumb:hover img {
+        filter: blur(6px);
+      }
+
+      .corp-video-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(150, 128, 168, 0.5) 0%, rgba(111, 86, 129, 0.4) 100%);
+        pointer-events: none;
+      }
+
+      .corp-video-thumb:hover::after {
+        background: linear-gradient(135deg, rgba(150, 128, 168, 0.62) 0%, rgba(111, 86, 129, 0.52) 100%);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .corp-video-thumb img {
+          transition: none;
+        }
       }
 
       .corp-video-thumb:hover {
@@ -664,10 +701,13 @@
       }
 
       .corp-video-thumb svg {
+        position: relative;
+        z-index: 1;
         width: 64px;
         height: 64px;
-        opacity: 0.9;
-        margin-bottom: 1.2rem;
+        opacity: 0.95;
+        margin-bottom: 0;
+        filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.4));
         transition: opacity 0.3s, transform 0.3s;
       }
 
@@ -826,6 +866,20 @@
         font-weight: 300;
         max-width: 600px;
         margin: 0 auto;
+      }
+
+      .agendar-whats {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .agendar-whats .agendar-or {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        font-weight: 300;
       }
 
       .corp-form {
@@ -1164,6 +1218,7 @@
         }
 
         .form-submit-row .btn,
+        .agendar-whats .btn,
         .hero .btn {
           width: 100%;
           max-width: 340px;
@@ -1436,12 +1491,12 @@
       </div>
       <div class="corp-video-wrap fade-up">
         <div class="corp-video-thumb">
+          <img src="imagens/thumb/solucoes_corporativas.JPG" alt="Soluções corporativas em saúde mental perinatal" decoding="async">
           <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"
             stroke-linejoin="round">
             <circle cx="12" cy="12" r="10" />
             <polygon points="10 8 16 12 10 16 10 8" fill="white" stroke="none" />
           </svg>
-          <p>Vídeo explicativo em breve.</p>
         </div>
       </div>
     </section>
@@ -1512,6 +1567,10 @@
           <p>Preencha o formulário abaixo para agendarmos uma reunião breve com o RH. O objetivo é mapear, sem
             compromisso, gestantes, retornos de licença, maturidade das lideranças e o formato mais adequado para a sua
             empresa.</p>
+          <div class="agendar-whats">
+            <a href="https://wa.me/5511988483143?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20as%20solu%C3%A7%C3%B5es%20corporativas%20para%20o%20meu%20time." class="btn btn-primary" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+            <span class="agendar-or">ou preencha o formulário abaixo, se preferir</span>
+          </div>
         </div>
 
         <!--

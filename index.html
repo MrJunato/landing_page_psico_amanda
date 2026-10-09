@@ -138,19 +138,19 @@
       }
 
       :root {
-        --lilac: #B8A9C9;
-        --lilac-light: #D0C4DC;
-        --lilac-deep: #9680A8;
-        --cream: #FDF9FB;
-        --rose: #E2B8CC;
-        --rose-deep: #8F536C;
-        --rose-light: #F0D5E0;
-        --rose-pale: #F7E5EC;
-        --text: #3D3D3D;
-        --text-light: #6B6B6B;
+        --lilac: #B59FBF;
+        --lilac-light: #B59FBF;
+        --lilac-deep: #8d6698d1;
+        --cream: #b59fbf1a;
+        --rose: #B59FBF;
+        --rose-deep: #612865;
+        --rose-light: #F9ECE8;
+        --rose-pale: #F9ECE8;
+        --text: #401B42;
+        --text-light: #401B42;
         --white: #FFFFFF;
-        --blush: #F5E1EB;
-        --lilac-text: #6F5681;
+        --blush: #b59fbf78;
+        --lilac-text: #612865;
       }
 
       html {
@@ -183,7 +183,7 @@
         padding: 0.8rem 5%;
         height: 64px;
         overflow: visible;
-        background: rgba(250, 247, 242, 0.92);
+        background: rgba(249, 236, 232, 0.92);
         backdrop-filter: blur(12px);
         transition: box-shadow 0.3s;
       }
@@ -214,7 +214,7 @@
 
       .logo-text span {
         font-style: italic;
-        color: var(--rose);
+        color: #612865;
       }
 
       .nav-links {
@@ -245,8 +245,8 @@
         text-align: center;
         padding: 8rem 2rem 4rem;
         background:
-          radial-gradient(ellipse at 20% 50%, rgba(184, 169, 201, 0.15) 0%, transparent 60%),
-          radial-gradient(ellipse at 80% 30%, rgba(226, 184, 204, 0.2) 0%, transparent 60%),
+          radial-gradient(ellipse at 20% 50%, rgba(181, 159, 191, 0.15) 0%, transparent 60%),
+          radial-gradient(ellipse at 80% 30%, rgba(181, 159, 191, 0.2) 0%, transparent 60%),
           var(--cream);
         position: relative;
         overflow: hidden;
@@ -319,7 +319,7 @@
         display: inline-block;
         padding: 0.45rem 1.4rem;
         border-radius: 50px;
-        background: rgba(184, 169, 201, 0.12);
+        background: rgba(181, 159, 191, 0.12);
         color: var(--lilac-text);
         font-size: 0.8rem;
         letter-spacing: 1.5px;
@@ -363,26 +363,26 @@
       }
 
       .btn-primary {
-        background: var(--lilac);
+        background: #612865;
         color: var(--white);
-        box-shadow: 0 4px 20px rgba(184, 169, 201, 0.3);
+        box-shadow: 0 4px 20px rgba(181, 159, 191, 0.3);
       }
 
       .btn-primary:hover {
-        background: var(--lilac-light);
+        background: #612865;
         transform: translateY(-2px);
-        box-shadow: 0 6px 28px rgba(184, 169, 201, 0.35);
+        box-shadow: 0 6px 28px rgba(181, 159, 191, 0.35);
       }
 
       .btn-outline {
         background: transparent;
-        color: var(--lilac);
-        border: 2px solid var(--lilac);
+        color: #612865;
+        border: 2px solid #612865;
         margin-left: 1rem;
       }
 
       .btn-outline:hover {
-        background: var(--lilac);
+        background: #612865;
         color: var(--white);
       }
 
@@ -453,10 +453,10 @@
       .about-mission-text {
         flex: 1 1 400px;
         padding: 2rem;
-        border: 1px solid rgba(184, 169, 201, 0.16);
+        border: 1px solid rgba(181, 159, 191, 0.16);
         border-radius: 24px;
         background: rgba(255, 255, 255, 0.72);
-        box-shadow: 0 18px 42px rgba(74, 59, 59, 0.06);
+        box-shadow: 0 18px 42px rgba(64, 27, 66, 0.06);
         backdrop-filter: blur(3px);
       }
 
@@ -541,10 +541,10 @@
         display: inline-block;
         margin-top: 0.5rem;
         padding: 0.3rem 1rem;
-        background: rgba(184, 169, 201, 0.15);
+        background: #B59FBF;
         border-radius: 6px;
         font-size: 0.85rem;
-        color: var(--lilac);
+        color: #401B42;
         font-weight: 700;
       }
 
@@ -575,7 +575,7 @@
         width: 36px;
         height: 36px;
         border-radius: 10px;
-        background: rgba(184, 169, 201, 0.12);
+        background: rgba(181, 159, 191, 0.12);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -628,7 +628,7 @@
 
       .service-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 40px rgba(184, 169, 201, 0.15);
+        box-shadow: 0 12px 40px rgba(181, 159, 191, 0.15);
         border-color: var(--lilac-light);
       }
 
@@ -640,7 +640,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 1.2rem;
-        background: rgba(184, 169, 201, 0.12);
+        background: rgba(181, 159, 191, 0.12);
       }
 
       .service-icon svg {
@@ -707,7 +707,7 @@
 
       .service-real-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 40px rgba(184, 169, 201, 0.18);
+        box-shadow: 0 12px 40px rgba(181, 159, 191, 0.18);
         border-color: var(--lilac-light);
       }
 
@@ -715,7 +715,7 @@
         flex-shrink: 0;
         width: 200px;
         min-height: 180px;
-        background: linear-gradient(135deg, #C9B8D4 0%, #A68BB5 50%, #8B6E9E 100%);
+        background: linear-gradient(135deg, #B59FBF 0%, #8D6698 50%, #612865 100%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -743,12 +743,12 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(150, 128, 168, 0.5) 0%, rgba(111, 86, 129, 0.4) 100%);
+        background: linear-gradient(135deg, rgba(141, 102, 152, 0.5) 0%, rgba(97, 40, 101, 0.4) 100%);
         pointer-events: none;
       }
 
       .service-real-card:hover .service-video-thumb::after {
-        background: linear-gradient(135deg, rgba(150, 128, 168, 0.62) 0%, rgba(111, 86, 129, 0.52) 100%);
+        background: linear-gradient(135deg, rgba(141, 102, 152, 0.62) 0%, rgba(97, 40, 101, 0.52) 100%);
       }
 
       /* ENQUADRAMENTO DAS THUMBS — ajuste fino por cartao:
@@ -758,9 +758,11 @@
       .service-real-card[data-service="terapia"] .service-video-thumb img {
         object-position: center 30%;
       }
+
       .service-real-card[data-service="prenatal"] .service-video-thumb img {
         object-position: center 10%;
       }
+
       .service-real-card[data-service="roda"] .service-video-thumb img {
         object-position: center 20%;
       }
@@ -826,7 +828,7 @@
         position: fixed;
         inset: 0;
         z-index: 200;
-        background: rgba(61, 61, 61, 0.55);
+        background: rgba(64, 27, 66, 0.55);
         backdrop-filter: blur(4px);
         align-items: center;
         justify-content: center;
@@ -907,7 +909,7 @@
         width: 52px;
         height: 52px;
         border-radius: 14px;
-        background: rgba(184, 169, 201, 0.12);
+        background: rgba(181, 159, 191, 0.12);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -986,7 +988,7 @@
         text-align: center;
         padding: 6rem 2rem;
         background:
-          radial-gradient(ellipse at 50% 50%, rgba(184, 169, 201, 0.08) 0%, transparent 70%),
+          radial-gradient(ellipse at 50% 50%, rgba(181, 159, 191, 0.08) 0%, transparent 70%),
           var(--cream);
       }
 
@@ -1007,7 +1009,7 @@
       footer {
         text-align: center;
         padding: 0.4rem 5% 1rem;
-        background: var(--text);
+        background: #401B42;
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.85rem;
         font-weight: 300;
@@ -1068,7 +1070,7 @@
           top: 100%;
           left: 0;
           right: 0;
-          background: rgba(250, 247, 242, 0.97);
+          background: rgba(249, 236, 232, 0.97);
           backdrop-filter: blur(12px);
           padding: 1rem 5% 1.5rem;
           box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
@@ -1079,7 +1081,7 @@
         }
 
         .nav-links li {
-          border-bottom: 1px solid rgba(184, 169, 201, 0.15);
+          border-bottom: 1px solid rgba(181, 159, 191, 0.15);
         }
 
         .nav-links a {
@@ -1140,8 +1142,13 @@
 
       /* ---- TEASER CORPORATIVO ---- */
       #corporativo-teaser {
-        background: linear-gradient(135deg, var(--blush) 0%, var(--rose-pale) 100%);
+        background: linear-gradient(135deg, var(--lilac) 0%, var(--lilac-deep) 100%);
         text-align: center;
+      }
+
+      #corporativo-teaser .section-title,
+      #corporativo-teaser .section-subtitle {
+        color: #401B42;
       }
 
       .corp-teaser-wrap {
@@ -1166,11 +1173,11 @@
         padding: 0.5rem 1.1rem;
         border-radius: 50px;
         background: var(--white);
-        color: var(--lilac-deep);
+        color: #8D6698;
         font-size: 0.82rem;
         font-weight: 700;
         letter-spacing: 0.4px;
-        box-shadow: 0 2px 10px rgba(184, 169, 201, 0.12);
+        box-shadow: 0 2px 10px rgba(181, 159, 191, 0.12);
       }
 
       .corp-teaser-cta {
@@ -1199,7 +1206,7 @@
 
       .faq-item {
         border-radius: 16px;
-        background: var(--cream);
+        background: rgba(181, 159, 191, 0.28);
         overflow: hidden;
       }
 
@@ -1230,7 +1237,7 @@
         width: 22px;
         height: 22px;
         border-radius: 50%;
-        background: rgba(184, 169, 201, 0.15);
+        background: rgba(181, 159, 191, 0.15);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1514,8 +1521,8 @@
       <!-- Bloco 1: Missão / Profissional -->
       <div class="about-mission">
         <div class="about-image fade-up">
-          <img src="imagens/perfil/_MG_9197.JPG" alt="Amanda Rodrigues, psicóloga perinatal, sorrindo" decoding="async" width="400"
-            height="500" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+          <img src="imagens/perfil/_MG_9197.JPG" alt="Amanda Rodrigues, psicóloga perinatal, sorrindo" decoding="async"
+            width="400" height="500" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
         </div>
         <div class="about-mission-text fade-up">
           <div class="section-label">Sobre mim</div>
@@ -1539,7 +1546,7 @@
       <div class="about-divider fade-up">
         <div class="about-divider-ornament">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M7 1 L8.5 5.5 L13 7 L8.5 8.5 L7 13 L5.5 8.5 L1 7 L5.5 5.5 Z" fill="#E2B8CC" opacity="0.8" />
+            <path d="M7 1 L8.5 5.5 L13 7 L8.5 8.5 L7 13 L5.5 8.5 L1 7 L5.5 5.5 Z" fill="#B59FBF" opacity="0.8" />
           </svg>
         </div>
         <p class="about-divider-phrase">E por trás desse cuidado, tem uma história real.</p>
@@ -1919,41 +1926,41 @@
       // Para adicionar o vídeo: substitua a URL em "instagram" pelo link do Reel/post
       const services = {
         gestacao: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z"/></svg>`,
           title: 'Acompanhamento na Gestação',
           description: `<p>A gestação é um período de profundas transformações no corpo, na identidade e nos vínculos. Ansiedade, medos sobre o parto, dúvidas sobre a maternidade e mudanças no relacionamento são experiências muito comuns e merecem ser acolhidas com cuidado.</p><p>Ofereço um espaço seguro para você falar sobre o que está sentindo, organizar emoções difusas e chegar ao parto e ao pós-parto com mais segurança e presença.</p>`,
           instagram: null, // Substitua por: 'https://www.instagram.com/reel/CODIGO_DO_REEL/'
         },
         posparto: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
           title: 'Pós-Parto',
           description: `<p>Os primeiros meses após o nascimento do bebê podem ser marcados por exaustão, choro sem motivo aparente, sensação de incapacidade e um amor que convive com um cansaço enorme. Isso não é fraqueza, é a intensidade do pós-parto.</p><p>O acompanhamento nessa fase ajuda a identificar sinais de depressão pós-parto e baby blues, a lidar com a nova rotina e a reencontrar quem você é além do papel de mãe.</p>`,
           instagram: null, // Substitua por: 'https://www.instagram.com/reel/CODIGO_DO_REEL/'
         },
         perda: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
           title: 'Perda Gestacional',
           description: `<p>O luto por um filho é único e muitas vezes silenciado pela sociedade. Seja um aborto espontâneo, uma perda tardia ou um natimorto, essa dor é real e merece ser reconhecida e acolhida sem pressa.</p><p>Acompanho mulheres e famílias que passaram por essa experiência, oferecendo um espaço de escuta compassiva onde a dor pode ser nomeada e o processo de luto pode acontecer no seu tempo.</p>`,
           instagram: null, // Substitua por: 'https://www.instagram.com/reel/CODIGO_DO_REEL/'
         },
         parental: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
           title: 'Orientação Parental',
           description: `<p>A chegada de um filho transforma a dinâmica familiar de formas que muitas vezes não antecipamos. Conflitos no relacionamento, dúvidas sobre como estabelecer vínculo com o bebê e inseguranças sobre os cuidados iniciais são muito comuns.</p><p>A orientação parental oferece suporte prático e emocional para que mães, pais e parceiros naveguem essa nova fase com mais segurança, presença e conexão entre si.</p>`,
           instagram: null, // Temas não possuem vídeo no modal
         },
         terapia: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8M12 8v8"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h8M12 8v8"/></svg>`,
           title: 'Terapia Individual',
           description: `<p>Sessões de psicoterapia com duração de 50 minutos, disponíveis nas modalidades presencial e online. Um espaço sigiloso e acolhedor para você explorar suas emoções, desafios e transformações durante o ciclo gravídico-puerperal e em outras fases da vida.</p><p>A abordagem utilizada é a Gestalt-Terapia, que coloca você como protagonista do seu próprio processo. O ritmo é o seu, e cada sessão é um convite ao autoconhecimento com acolhimento e respeito.</p>`,
         },
         prenatal: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
           title: 'Pré-Natal Psicológico',
           description: `<p>Programa estruturado em 8 encontros de 1h30, realizado em grupo com até 8 gestantes ou de forma individual. Cada encontro aborda um tema relevante para a preparação emocional durante a gestação, parto e pós-parto.</p><p>O Pré-Natal Psicológico é um espaço de acolhimento e informação que fortalece seus recursos internos, amplia a consciência sobre as transformações desse período e promove uma vivência mais integrada e segura da maternidade.</p>`,
         },
         roda: {
-          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B8A9C9" fill="none"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/></svg>`,
+          icon: `<svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="26" height="26" stroke="#B59FBF" fill="none"><circle cx="12" cy="8" r="5"/><path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/></svg>`,
           title: 'Roda de Conversa',
           description: `<p>Encontros em grupo para promoção do diálogo e reflexões sobre saúde mental, emoções e desafios vividos no ciclo perinatal. Um espaço coletivo de acolhimento, escuta ativa e troca de experiências entre mulheres que compartilham vivências semelhantes.</p><p>A Roda de Conversa é um convite para que você se sinta acompanhada, reconheça que não está sozinha nas suas vivências e encontre novas perspectivas a partir da escuta e da fala em um ambiente seguro e mediado.</p>`,
         }
@@ -2039,7 +2046,7 @@
       <span>Este site usa cookies para análise de tráfego, conforme nossa política de privacidade.</span>
       <button
         onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookieOk','1')"
-        style="background:#b07b9e;color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;white-space:nowrap;flex-shrink:0;">Entendi</button>
+        style="background:#8D6698;color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;white-space:nowrap;flex-shrink:0;">Entendi</button>
     </div>
     <script>
       if (localStorage.getItem('cookieOk')) document.getElementById('cookie-banner').style.display = 'none';
